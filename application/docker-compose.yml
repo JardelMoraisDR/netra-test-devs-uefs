@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  # Aplicação Laravel
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        user: laravel
+        uid: 1000
+    image: api-blog-system
+    container_name: api-blog-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - api-blog-network
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DB_CONNECTION=pgsql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=api_blog_system
+      - DB_USERNAME=laravel
+      - DB_PASSWORD=secret
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+  # Servidor Web Nginx
+  nginx:
+    image: nginx:alpine
+    container_name: api-blog-nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - api-blog-network
+    depends_on:
+      - app
+
+  # Banco PostgreSQL
+  postgres:
+    image: postgres:16-alpine
+    container_name: api-blog-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: api_blog
+      POSTGRES_USER: laravel
+      POSTGRES_PASSWORD: secret
+      POSTGRES_ROOT_PASSWORD: secret
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - api-blog-network
+
+  # Redis para cache e sessões
+  redis:
+    image: redis:7-alpine
+    container_name: api-blog-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - api-blog-network
+
+  # Adminer para gerenciar banco (desenvolvimento)
+  adminer:
+    image: adminer:latest
+    container_name: api-blog-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    networks:
+      - api-blog-network
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  api-blog-network:
+    driver: bridge
