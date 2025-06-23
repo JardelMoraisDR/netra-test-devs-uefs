@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "darkaonline/l5-swagger": "^9.0",
+        "doctrine/dbal": "^4.2"
+    }
+}
