@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     nodejs \
     npm \
+    php8.3-redis \
 
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install pdo pdo_pgsql pgsql mbstring exif pcntl bcmath gd

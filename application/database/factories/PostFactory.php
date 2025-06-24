@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 
 class PostFactory extends Factory
 {
+    protected $model = \App\Models\Post::class;
+
     public function definition()
     {
         $title = $this->faker->unique()->sentence(6, true);

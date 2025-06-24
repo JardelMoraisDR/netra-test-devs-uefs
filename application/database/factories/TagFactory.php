@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 
 class TagFactory extends Factory
 {
+    protected $model = \App\Models\Tag::class;
+
     public function definition()
     {
         $name = $this->faker->unique()->word();
@@ -17,7 +19,6 @@ class TagFactory extends Factory
             'slug' => Str::slug($name),
             'color' => $this->faker->hexColor(),
             'description' => $this->faker->sentence(),
-            'posts_count' => 0,
             'created_at' => now(),
             'updated_at' => now(),
         ];

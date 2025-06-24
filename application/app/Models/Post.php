@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, HasUuids;
 
     public $incrementing = false; // UUID
     protected $keyType = 'string';
@@ -28,13 +29,11 @@ class Post extends Model
         'published_at' => 'datetime',
     ];
 
-    // Relacionamento: Post pertence a User
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // Relacionamento Many-to-Many com Tag
     public function tags()
     {
         return $this->belongsToMany(Tag::class, 'post_tags', 'post_id', 'tag_id');
