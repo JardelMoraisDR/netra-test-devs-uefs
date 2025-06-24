@@ -4,8 +4,8 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION IF NOT EXISTS "pg_trgm";
 
 -- Database para testes
-CREATE DATABASE api_blog_system_test;
-GRANT ALL PRIVILEGES ON DATABASE api_blog_system_test TO laravel;
+CREATE DATABASE api_blog_test;
+GRANT ALL PRIVILEGES ON DATABASE api_blog_test TO laravel;
 
 -- Configurações de performance
 ALTER SYSTEM SET shared_buffers = '256MB';

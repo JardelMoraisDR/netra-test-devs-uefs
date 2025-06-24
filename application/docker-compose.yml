@@ -9,7 +9,6 @@ services:
       args:
         user: laravel
         uid: 1000
-    image: api-blog-system
     container_name: api-blog-app
     restart: unless-stopped
     working_dir: /var/www
@@ -25,7 +24,7 @@ services:
       - DB_CONNECTION=pgsql
       - DB_HOST=postgres
       - DB_PORT=5432
-      - DB_DATABASE=api_blog_system
+      - DB_DATABASE=api_blog
       - DB_USERNAME=laravel
       - DB_PASSWORD=secret
       - REDIS_HOST=redis
