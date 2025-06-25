@@ -51,6 +51,10 @@ class PostService
 
     public function updatePost(Post $post, PostDTO $dto): Post
     {
+        if (!$dto->hasDataToUpdate()) {
+            return $post;
+        }
+
         return $this->postRepository->update($post, $dto->toArray());
     }
 

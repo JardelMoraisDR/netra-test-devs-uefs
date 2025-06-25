@@ -5,15 +5,6 @@ namespace App\Http\Requests\Api;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-/**
- * @OA\Schema(
- *     schema="UpdateTagRequest",
- *     @OA\Property(property="name", type="string", example="Laravel Framework"),
- *     @OA\Property(property="slug", type="string", example="laravel-framework"),
- *     @OA\Property(property="color", type="string", example="#4CAF50"),
- *     @OA\Property(property="description", type="string", example="Posts atualizados sobre Laravel")
- * )
- */
 class UpdateTagRequest extends FormRequest
 {
     public function authorize(): bool
@@ -23,11 +14,22 @@ class UpdateTagRequest extends FormRequest
 
     public function rules(): array
     {
-        $tagId = $this->route('tag')->id;
+        $tag = $this->route('tag');
+        $tagId = $tag ? $tag->id : null;
 
         return [
-            'name' => ['sometimes', 'string', 'max:255', Rule::unique('tags', 'name')->ignore($tagId)],
-            'slug' => ['sometimes', 'string', 'max:255', Rule::unique('tags', 'slug')->ignore($tagId)],
+            'name' => [
+                'sometimes', 
+                'string', 
+                'max:255', 
+                $tagId ? Rule::unique('tags', 'name')->ignore($tagId) : 'unique:tags,name'
+            ],
+            'slug' => [
+                'sometimes', 
+                'string', 
+                'max:255', 
+                $tagId ? Rule::unique('tags', 'slug')->ignore($tagId) : 'unique:tags,slug'
+            ],
             'color' => ['nullable', 'string', 'regex:/^#[0-9A-Fa-f]{6}$/'],
             'description' => ['nullable', 'string', 'max:500'],
         ];

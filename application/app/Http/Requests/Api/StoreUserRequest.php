@@ -4,15 +4,6 @@ namespace App\Http\Requests\Api;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * @OA\Schema(
- *     schema="StoreUserRequest",
- *     required={"name", "email", "password"},
- *     @OA\Property(property="name", type="string", example="John Doe"),
- *     @OA\Property(property="email", type="string", format="email", example="john@example.com"),
- *     @OA\Property(property="password", type="string", format="password", minLength=8, example="password123")
- * )
- */
 class StoreUserRequest extends FormRequest
 {
     public function authorize(): bool

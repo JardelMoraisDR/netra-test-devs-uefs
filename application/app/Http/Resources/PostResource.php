@@ -14,7 +14,7 @@ class PostResource extends JsonResource
             'title' => $this->title,
             'slug' => $this->slug,
             'excerpt' => $this->excerpt,
-            'content' => $this->when($request->routeIs('posts.show'), $this->content),
+            'content' => $this->content,
             'featured_image_url' => $this->featured_image_url,
             'status' => $this->status,
             'published_at' => $this->published_at?->toISOString(),
@@ -27,7 +27,7 @@ class PostResource extends JsonResource
             'tags_count' => $this->whenCounted('tags'),
             
             // URLs
-            'url' => route('posts.show', $this->slug),
+            'url' => url("/api/posts/{$this->slug}"),
         ];
     }
 }

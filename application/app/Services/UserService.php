@@ -31,6 +31,10 @@ class UserService
 
     public function updateUser(User $user, UserDTO $dto): User
     {
+        if (!$dto->hasDataToUpdate()) {
+            return $user;
+        }
+
         return $this->userRepository->update($user, $dto->toArray());
     }
 

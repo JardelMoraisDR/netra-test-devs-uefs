@@ -4,16 +4,6 @@ namespace App\Http\Requests\Api;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * @OA\Schema(
- *     schema="StoreTagRequest",
- *     required={"name"},
- *     @OA\Property(property="name", type="string", example="Laravel"),
- *     @OA\Property(property="slug", type="string", example="laravel"),
- *     @OA\Property(property="color", type="string", example="#FF6B6B"),
- *     @OA\Property(property="description", type="string", example="Posts sobre o framework Laravel")
- * )
- */
 class StoreTagRequest extends FormRequest
 {
     public function authorize(): bool

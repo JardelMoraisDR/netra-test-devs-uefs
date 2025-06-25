@@ -1,0 +1,1460 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Token de acesso inv\u00e1lido ou expirado.","error":"UNAUTHENTICATED"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/users
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"dfdf7436-566a-35a9-a78a-e4aea63f9f3d","name":"Nicholas Runolfsson MD","email":"amorar@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"},{"id":"08d46035-6ddb-3afa-af74-dd51d5771ea5","name":"Prof. Ricardo Mitchell V","email":"hilma66@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"},{"id":"18263fa4-f61e-3c39-a32c-91639cda2bb9","name":"Melody Stokes DDS","email":"hrussel@example.org","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},{"id":"c68fc6a3-7038-3bc1-8172-b587648b4577","name":"Miss America Senger III","email":"rbednar@example.com","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},{"id":"c2bd5225-fd12-333f-bf02-22251cd5ba1f","name":"Ardella Waelchi","email":"hannah27@example.org","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},{"id":"003f29af-9b36-3c00-8b3f-c87cbee18790","name":"Demond Volkman DVM","email":"tswift@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},{"id":"e488c5ce-3868-3952-8100-6877daef7e42","name":"Reva Franecki V","email":"jeff76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},{"id":"379a13b5-86df-3917-8478-071d9e6a4ef0","name":"Arno Parker","email":"stewart76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},{"id":"498129f8-f403-3640-9a7c-14b9ddb75344","name":"Mrs. Therese Huels","email":"crooks.lavon@example.com","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z"},{"id":"0197a5bf-c4f8-7390-8b23-82eba2aaeab1","name":"Jo\u00e3o Baronesa","email":"baronesa@teste.com","created_at":"2025-06-25T06:21:37.000000Z","updated_at":"2025-06-25T06:21:37.000000Z"},{"id":"0197a5d6-aa33-739a-8d43-79c82ec08891","name":"John Doe","email":"john@example.com","created_at":"2025-06-25T06:46:38.000000Z","updated_at":"2025-06-25T06:46:38.000000Z"}],"links":{"first":"http:\/\/localhost:8000\/api\/users?page=1","last":"http:\/\/localhost:8000\/api\/users?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/users?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/users","per_page":15,"to":12,"total":12}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":"dfdf7436-566a-35a9-a78a-e4aea63f9f3d","name":"Nicholas Runolfsson MD","email":"amorar@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{userId}/posts'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      userId:
+        name: userId
+        description: ''
+        required: true
+        example: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      userId: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"c5f200d3-340b-3a9c-8a7f-5443703d717a","title":"Aliquid error consequatur pariatur ut qui.","slug":"aliquid-error-consequatur-pariatur-ut-qui","excerpt":"Corporis dignissimos ut facere quod at. Voluptas distinctio similique accusantium nihil excepturi et. Inventore quia nihil ex ducimus numquam.","content":"Ex ipsam sint tempore repellat et quisquam porro. Sit suscipit odit et accusantium ipsam quas. Tenetur non quisquam itaque sapiente ducimus.\n\nOdit suscipit et est voluptatem officiis facilis. Qui porro rem et molestiae. Illo sunt nostrum odio consequatur nam. Explicabo consequuntur animi reprehenderit mollitia.\n\nVoluptatem sit nostrum est molestiae. Porro corporis neque perspiciatis. Enim est voluptates voluptatibus totam minima. Animi est enim ut voluptatem.\n\nDoloribus totam et molestiae minus harum nemo qui delectus. Rerum et error esse libero alias velit deserunt voluptas. Quisquam aut recusandae laudantium repellat. Quidem voluptas et saepe omnis.\n\nUt et deserunt aut dicta et. Earum eius culpa id. Incidunt ratione autem in a rerum totam quasi quos. Dolorum iure ipsum deserunt ut enim. Qui a consequuntur quibusdam et recusandae ipsa nostrum ut.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/002277?text=nature+qui","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"dfdf7436-566a-35a9-a78a-e4aea63f9f3d","name":"Nicholas Runolfsson MD","email":"amorar@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"},"tags":[{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ad"}],"url":"http:\/\/localhost:8000\/api\/posts\/aliquid-error-consequatur-pariatur-ut-qui"},{"id":"ee6a65ae-0da5-3e2a-bc75-434d9dd22c18","title":"Dicta laudantium dolores omnis vero magni magnam sit.","slug":"dicta-laudantium-dolores-omnis-vero-magni-magnam-sit","excerpt":"Ex officiis enim ipsa. Hic animi aut in est. Aut aut voluptas sunt magnam tempore.","content":"Dignissimos voluptas voluptas ducimus saepe expedita. Iusto quo non in temporibus pariatur soluta quia. Enim vero illo earum et est. Placeat nostrum corporis voluptatibus rerum autem. Aliquid aut dolores fuga voluptatem minus et corrupti.\n\nEsse amet nihil officia rerum esse. Suscipit maiores excepturi ipsum corrupti. Veritatis cum voluptatibus modi voluptates qui.\n\nOdio dolorem voluptas doloremque alias ut blanditiis sapiente. Quia maiores sunt inventore necessitatibus. Non reiciendis voluptatum amet earum tenetur pariatur omnis.\n\nVoluptas aut similique incidunt nemo. Sequi dolor quo tenetur natus voluptatem necessitatibus. Nihil incidunt mollitia aliquam laudantium quia omnis nulla et. Repudiandae odio eos voluptatem officiis rerum natus veniam. Dolores voluptatem incidunt blanditiis eum autem.\n\nPossimus sint unde delectus. Molestias enim accusantium est magnam et est dolor. Quam itaque laborum maxime quasi quo dignissimos.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ee88?text=nature+aut","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"dfdf7436-566a-35a9-a78a-e4aea63f9f3d","name":"Nicholas Runolfsson MD","email":"amorar@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"},"tags":[{"id":"975e3e35-d1d4-3f38-9cf4-c83edc4daf73","name":"Laudantium","slug":"laudantium","color":"#5f00f2","description":"Neque voluptatem quia et excepturi consectetur voluptatem.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/laudantium"}],"url":"http:\/\/localhost:8000\/api\/posts\/dicta-laudantium-dolores-omnis-vero-magni-magnam-sit"}],"links":{"first":"http:\/\/localhost:8000\/api\/users\/dfdf7436-566a-35a9-a78a-e4aea63f9f3d\/posts?page=1","last":"http:\/\/localhost:8000\/api\/users\/dfdf7436-566a-35a9-a78a-e4aea63f9f3d\/posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/users\/dfdf7436-566a-35a9-a78a-e4aea63f9f3d\/posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/users\/dfdf7436-566a-35a9-a78a-e4aea63f9f3d\/posts","per_page":15,"to":2,"total":2}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/posts
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"9135c4b0-30ac-3afe-b8f1-f428b5c205bf","title":"Reprehenderit praesentium omnis velit hic.","slug":"reprehenderit-praesentium-omnis-velit-hic","excerpt":"Sit enim itaque ipsam distinctio voluptas. Maiores corrupti est distinctio. Impedit provident et possimus esse.","content":"Tempore aspernatur aut harum facere a sit consequuntur. Et voluptatem dicta et deleniti. Amet earum beatae reiciendis tenetur necessitatibus.\n\nCum sit eveniet ut amet necessitatibus velit enim. Consequuntur molestiae consequatur fugiat esse quia ipsum similique. Expedita et esse ut quod eius necessitatibus ut. Molestiae nobis itaque nam veritatis et similique et.\n\nConsequatur atque doloribus excepturi suscipit eius omnis dolor. Mollitia eum nihil molestiae molestias. Quod incidunt voluptas temporibus et fugiat. Omnis quis provident exercitationem minima qui quis.\n\nSed quidem et suscipit. Ut magnam perspiciatis exercitationem nulla. Sit omnis nihil sapiente repudiandae nostrum dolor assumenda. Sed et enim ipsum eos non et enim.\n\nDolore molestiae deserunt exercitationem enim blanditiis aliquid. Ipsa delectus et id necessitatibus vel voluptatum. Quia vitae sapiente laborum et enim.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/0033cc?text=nature+sapiente","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"9803d4ae-51ef-3c77-bc68-97cb1cea5353","name":"Cupiditate","slug":"cupiditate","color":"#630e57","description":"Excepturi animi fugiat perferendis aut voluptatum distinctio ratione.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/cupiditate"},{"id":"31d3cbe2-f754-3fd7-91a2-4f6f2f0aad4c","name":"Velit","slug":"velit","color":"#38b945","description":"Porro odit et ad adipisci eos reprehenderit voluptates.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/velit"}],"url":"http:\/\/localhost:8000\/api\/posts\/reprehenderit-praesentium-omnis-velit-hic"},{"id":"d1948a75-8cf0-3dbe-be64-1314c253acaa","title":"Illo qui amet suscipit ratione blanditiis facilis itaque.","slug":"illo-qui-amet-suscipit-ratione-blanditiis-facilis-itaque","excerpt":"Eius vero earum voluptas reiciendis harum. Quibusdam non rerum commodi magni perferendis. Fuga aut occaecati veniam.","content":"Pariatur labore enim excepturi eum quia et aut. Debitis nulla debitis quod adipisci. Nisi ut debitis porro qui eaque. Eveniet maxime modi iste aut aut similique atque.\n\nQuae voluptatem ut delectus autem enim error at. Amet quisquam aut non officia sit sunt. Eius sint omnis in.\n\nCorporis itaque iusto tempore quis quod. Ducimus et dicta est ullam. Omnis nam assumenda quod. Excepturi voluptas in voluptatibus.\n\nEveniet omnis velit earum quam quia cupiditate. Nisi expedita quas et culpa est molestiae quia sunt. In sunt voluptas sunt voluptas rerum necessitatibus ad assumenda.\n\nDolores suscipit laudantium id hic. Et placeat et saepe atque ut quia. Sint nesciunt est sit reiciendis ducimus id odio.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ee66?text=nature+aliquid","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"498129f8-f403-3640-9a7c-14b9ddb75344","name":"Mrs. Therese Huels","email":"crooks.lavon@example.com","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/excepturi"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/eligendi"},{"id":"6e054f7e-dca7-362a-bebb-ce586c4f93eb","name":"Enim","slug":"enim","color":"#315c7e","description":"Est quaerat sapiente tenetur dolor.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/enim"}],"url":"http:\/\/localhost:8000\/api\/posts\/illo-qui-amet-suscipit-ratione-blanditiis-facilis-itaque"},{"id":"3a693cbb-4f34-3261-b07c-e04096e0051e","title":"Occaecati et labore facere qui.","slug":"occaecati-et-labore-facere-qui","excerpt":"Adipisci tempora enim velit a illo ducimus ullam. Dolor facere non facilis est hic est autem.","content":"Vel qui in quis quam qui impedit maxime consequatur. Ut molestias ipsa similique molestias et. Nobis qui id eaque veritatis autem.\n\nAsperiores voluptate consequuntur deleniti sit maiores enim tempora. Molestiae veniam dignissimos qui eius. Ea dolor tempore aut provident quasi.\n\nPerspiciatis debitis quis et deserunt in sed. Voluptates perspiciatis laudantium et ducimus illum ea. In mollitia laudantium molestias omnis quis aliquam. Aut quae excepturi est nulla sapiente magni.\n\nCulpa nihil quaerat commodi eos. Enim aut fuga voluptatibus aut incidunt itaque. Ex inventore dignissimos quod doloribus.\n\nNumquam hic quisquam sequi qui odio voluptatibus est ut. Dolorum quam aut ut. Ut et voluptas quo maxime. Porro quia possimus officiis dolore cum veritatis natus.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/005555?text=nature+temporibus","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"c68fc6a3-7038-3bc1-8172-b587648b4577","name":"Miss America Senger III","email":"rbednar@example.com","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"b4a3f55e-64ae-3784-aab0-db987c96dcda","name":"Tempore","slug":"tempore","color":"#c15bef","description":"Officiis quia aut est et nihil.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/tempore"}],"url":"http:\/\/localhost:8000\/api\/posts\/occaecati-et-labore-facere-qui"},{"id":"411a979c-fcb2-3905-a6e8-847d13f5bc82","title":"Ullam accusamus voluptates corrupti error.","slug":"ullam-accusamus-voluptates-corrupti-error","excerpt":"Voluptatibus pariatur sed ut. Non eum quod eligendi mollitia eos est omnis. Perferendis ipsam hic optio qui ut. Sit doloribus facere et eius.","content":"Ullam et eius earum minus quia ut similique. Ea voluptatibus aliquid similique voluptas harum qui. Sit non vel rerum reiciendis quia. Eius et nesciunt fugit voluptatem.\n\nIllo qui in totam et. Suscipit ea est provident dolor. Quis ducimus asperiores voluptates dolorem consequuntur cumque eos.\n\nEt assumenda aperiam nihil laudantium optio eum tempore. Quibusdam animi sed nobis ad. Consectetur explicabo corrupti sed nemo fugiat velit omnis.\n\nVoluptatibus autem qui sed fugiat voluptatibus omnis commodi adipisci. Quidem distinctio assumenda harum unde dolorum. Animi facere qui perferendis voluptatem doloribus vel est.\n\nRem veniam accusantium ad delectus expedita sed. Beatae ut pariatur dignissimos omnis. Sint dolorum illo quam sit voluptatem. Aut similique dolor tempore quod.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/0044bb?text=nature+ab","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/fugiat"},{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/excepturi"},{"id":"f4c81e8a-b6c3-35e4-8c68-52e8fb06a9a6","name":"Id","slug":"id","color":"#9b4208","description":"Ex et soluta fugiat vel et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/id"}],"url":"http:\/\/localhost:8000\/api\/posts\/ullam-accusamus-voluptates-corrupti-error"},{"id":"4ddae3fc-02de-3233-9d63-1d5a97192064","title":"Molestiae at corporis temporibus animi exercitationem porro et est.","slug":"molestiae-at-corporis-temporibus-animi-exercitationem-porro-et-est","excerpt":"Possimus ipsum laboriosam omnis. Autem repellat ipsa natus. Repudiandae dolore perferendis enim doloribus harum est. Explicabo sit hic qui nihil ea.","content":"Neque non consequatur quia et voluptatem natus excepturi. Aut deleniti atque hic et magnam nihil optio. Non libero modi sed ex recusandae at voluptatibus. Itaque doloribus rerum minima aut aperiam voluptas alias.\n\nSint doloremque quo magni exercitationem odit. Laborum dolores sint exercitationem assumenda. Doloremque quidem quia unde omnis error. Aliquam et porro sit aut corrupti placeat.\n\nAt doloremque itaque libero ea nobis et aut. Dicta voluptas quia inventore quisquam provident animi ab. Beatae molestias quibusdam cumque officia quibusdam.\n\nId illum est delectus odio corporis consequuntur. Nulla dolor nesciunt quam eos. Non hic facere sunt.\n\nVoluptas labore sapiente quos in voluptatibus animi doloribus. Ut rerum numquam voluptate. Dignissimos non veritatis ut ipsam et adipisci id magni.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/0077aa?text=nature+eius","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"003f29af-9b36-3c00-8b3f-c87cbee18790","name":"Demond Volkman DVM","email":"tswift@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/eligendi"}],"url":"http:\/\/localhost:8000\/api\/posts\/molestiae-at-corporis-temporibus-animi-exercitationem-porro-et-est"},{"id":"9ffc5d6e-6a05-3a22-afad-3dba2d226ea6","title":"Qui eum reiciendis repellat illo error eum.","slug":"qui-eum-reiciendis-repellat-illo-error-eum","excerpt":"Ea incidunt dicta dolorem voluptate. Dicta voluptas nihil sunt odio corrupti. Et quam ex sed quibusdam ullam non praesentium quia.","content":"Quae suscipit aut est suscipit rerum sunt. Odit eligendi sunt perspiciatis repellendus dolorem deserunt rerum modi. Vitae velit voluptatibus a aut dolorem molestiae. Nulla aperiam quia eius est.\n\nAspernatur ex ad omnis beatae qui. Qui illum delectus modi numquam iure qui. Vitae ut vero est sit ut. Incidunt accusantium explicabo quis qui et ut ut.\n\nSoluta repellendus aspernatur qui dicta doloremque. Omnis in architecto voluptas qui. Enim repellendus voluptatem ipsam. Dolorem et iusto enim architecto voluptatibus omnis sunt.\n\nIste voluptas ut amet consequatur neque. Dolorem voluptatum ratione quia molestias quos autem provident. Voluptas laboriosam voluptatem ipsam voluptas ut aut. Voluptas aut explicabo doloremque quas velit perspiciatis.\n\nPerspiciatis nesciunt ullam rerum nemo qui autem. Eum et molestiae tempora aut voluptatem possimus. Atque consequuntur excepturi officia magni quam. Ex et impedit sunt asperiores at harum voluptas.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ff00?text=nature+ea","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"003f29af-9b36-3c00-8b3f-c87cbee18790","name":"Demond Volkman DVM","email":"tswift@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/eligendi"},{"id":"6e054f7e-dca7-362a-bebb-ce586c4f93eb","name":"Enim","slug":"enim","color":"#315c7e","description":"Est quaerat sapiente tenetur dolor.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/enim"}],"url":"http:\/\/localhost:8000\/api\/posts\/qui-eum-reiciendis-repellat-illo-error-eum"},{"id":"50d61e2b-2158-3d0c-99df-7733d1a451d3","title":"Porro corporis iure possimus quia cum vitae.","slug":"porro-corporis-iure-possimus-quia-cum-vitae","excerpt":"Cupiditate rem asperiores eos amet dolore quia voluptatem quos. Nisi est sapiente eius.","content":"Neque magnam molestiae ullam itaque magni ullam natus est. Corrupti rerum voluptatem optio eos. Illo voluptas quaerat quod quam blanditiis sunt.\n\nOdio in itaque saepe. Quia architecto fuga ad ut eos architecto voluptatem. Est ut est quaerat possimus labore. Et est dolorem a asperiores.\n\nUnde labore molestias sed sed et qui accusamus. Et suscipit iusto ex voluptatem itaque quae eius odit. Accusamus recusandae ratione voluptatem. Eius quia ut et et consequatur velit tenetur.\n\nDistinctio tempore corrupti hic repudiandae et eaque. Vero numquam est dolorem qui explicabo reiciendis perspiciatis cumque. Consequatur accusantium exercitationem ullam et voluptatem iure. Eveniet labore tenetur accusantium ea rem.\n\nEa voluptas nam odit iusto quo et modi et. Sit quis aut provident pariatur ipsa adipisci. Modi earum omnis quia sit neque voluptas. Animi repellat voluptatem ipsam vitae saepe inventore.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00dd66?text=nature+qui","status":"published","published_at":"2025-05-13T04:18:54.000000Z","created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"498129f8-f403-3640-9a7c-14b9ddb75344","name":"Mrs. Therese Huels","email":"crooks.lavon@example.com","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"c072cb21-772f-349d-9065-009a360a580d","name":"Recusandae","slug":"recusandae","color":"#26f4b1","description":"Perferendis tempore molestias id non et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/recusandae"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/porro-corporis-iure-possimus-quia-cum-vitae"},{"id":"2d793be4-3d27-3cd1-ae84-634bc1b64755","title":"Quibusdam aut vel id mollitia.","slug":"quibusdam-aut-vel-id-mollitia","excerpt":"Mollitia magnam sit officiis magnam. Molestiae cumque ea quia sint enim voluptates accusantium repellat. Enim sed laudantium illum possimus velit.","content":"Consequatur vero ut non sunt sint voluptate. Ut nihil consectetur veritatis et enim culpa. Est rerum atque tenetur dolor. Sit illo aut est qui commodi itaque aut.\n\nCulpa iure rerum aperiam. Quo enim et aut. Enim eveniet cumque sunt sequi earum vel rem non.\n\nExplicabo veritatis nihil quia dolor itaque. Fugiat non est fugiat quia. Nostrum quia qui et et labore praesentium.\n\nNihil reprehenderit corrupti quidem provident harum corrupti. Quam fugit eligendi quibusdam voluptas omnis. Provident quia veniam sit. Nulla reprehenderit quaerat eos et error. Illo eos esse quam voluptate id.\n\nUt qui laborum sint officiis suscipit veniam. Eius quaerat nostrum ut magnam voluptates. Corporis dolor omnis vel consectetur sit qui vitae possimus.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00aa99?text=nature+beatae","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"e488c5ce-3868-3952-8100-6877daef7e42","name":"Reva Franecki V","email":"jeff76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"975e3e35-d1d4-3f38-9cf4-c83edc4daf73","name":"Laudantium","slug":"laudantium","color":"#5f00f2","description":"Neque voluptatem quia et excepturi consectetur voluptatem.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/laudantium"}],"url":"http:\/\/localhost:8000\/api\/posts\/quibusdam-aut-vel-id-mollitia"},{"id":"7b2f7231-0ca7-38ff-bf9c-3f68f43a9731","title":"Nihil ratione fugit ipsam distinctio quos ut.","slug":"nihil-ratione-fugit-ipsam-distinctio-quos-ut","excerpt":"Et nulla inventore facilis. Quod pariatur voluptate quis recusandae placeat voluptates dolore. Eaque vel hic temporibus maiores sed qui.","content":"Beatae accusamus mollitia repellat atque dolorem eum cupiditate cumque. Nihil dicta laboriosam optio molestiae molestias quam ex. Eos aperiam earum itaque ea expedita qui iure.\n\nPerspiciatis laudantium vero sit distinctio odit voluptas sed nihil. Consequuntur reprehenderit quo enim ipsam non provident laudantium. Id soluta autem quas magni nobis nemo aut.\n\nReiciendis earum aut fugit enim quia. Id qui reiciendis voluptas rem. Ea nobis rerum amet.\n\nLibero eos rerum sit quae. Aut molestiae deserunt ipsa laudantium consequatur nihil. Sunt voluptatibus quaerat reiciendis quaerat fugit. Ut quis consequatur consequatur a. Saepe tempora aut modi quo et.\n\nMinima facilis doloribus corporis alias. Unde et error aliquam minima est accusantium. Sapiente est doloribus eum quos qui. Delectus rerum sit harum velit architecto tempora ea. Itaque eius nisi sequi asperiores placeat modi.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ffbb?text=nature+est","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"379a13b5-86df-3917-8478-071d9e6a4ef0","name":"Arno Parker","email":"stewart76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/nihil-ratione-fugit-ipsam-distinctio-quos-ut"},{"id":"9b15bcd0-a4c8-355d-b2a5-c82f6c79997c","title":"Qui cumque est tempora quis modi sed qui.","slug":"qui-cumque-est-tempora-quis-modi-sed-qui","excerpt":"Voluptas ratione nesciunt debitis dolorem. Sapiente perferendis vitae eaque. Enim modi animi praesentium est voluptatibus.","content":"Eaque voluptatem eligendi voluptates qui. Repudiandae dolorum quaerat facere repellendus aliquam voluptatum velit. Qui eligendi eum voluptate iusto quis. Assumenda et alias omnis rerum hic ratione.\n\nSint illo itaque qui minima quo. Qui sit commodi ab voluptatem doloribus facere. Quasi dolor aliquam enim.\n\nNostrum atque exercitationem fugit tempore. Sit officia sint esse eveniet ea.\n\nEnim cum rerum voluptatum eaque. Cupiditate debitis vel quis iusto repudiandae. Ipsam nesciunt veniam quia temporibus quia consequatur. Illum esse nulla itaque quia ex expedita.\n\nIusto eum voluptatem deserunt quia nam. Tempore quis nisi quia explicabo magni et nesciunt. Quia laboriosam et itaque quia quibusdam consequatur sint et. Quidem commodi provident modi fuga.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ffff?text=nature+ut","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"003f29af-9b36-3c00-8b3f-c87cbee18790","name":"Demond Volkman DVM","email":"tswift@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"360838b9-3625-326f-84aa-2a324db8ebca","name":"Est","slug":"est","color":"#e2073b","description":"Et cupiditate blanditiis sed iusto quo distinctio nobis et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/est"},{"id":"c072cb21-772f-349d-9065-009a360a580d","name":"Recusandae","slug":"recusandae","color":"#26f4b1","description":"Perferendis tempore molestias id non et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/recusandae"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ad"},{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/fugiat"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/qui-cumque-est-tempora-quis-modi-sed-qui"},{"id":"9d96ebe5-dc25-3759-b33e-2ba030c197b0","title":"Consequatur dolores et iusto et.","slug":"consequatur-dolores-et-iusto-et","excerpt":"Ducimus quisquam quisquam et error. Nulla quod veritatis et ea est atque. Vitae illum sit et sed.","content":"Quia est id enim natus. Consequatur accusamus atque qui culpa recusandae quidem suscipit. Aliquid provident vero qui rerum. Dolorem dolorem nulla dolore et iste voluptates.\n\nUllam facere expedita deserunt modi et nisi. Nihil ipsum asperiores repudiandae suscipit aut laudantium et. Itaque et reprehenderit sunt sed dolor vitae. Sint velit illo magni eos ut aut facilis. Vitae aperiam dicta sint ut.\n\nEst eligendi aliquam aperiam fugit corporis. Quos autem aperiam consequuntur ratione consequatur sunt. Dolores doloribus repellendus soluta aliquam quam hic quae.\n\nIpsa ipsa autem et a atque aperiam dolor. Ullam velit aut doloribus ut non dignissimos.\n\nEt aut dolores est aut non modi. Doloremque officiis dolor rerum quidem.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/0066ee?text=nature+vero","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"08d46035-6ddb-3afa-af74-dd51d5771ea5","name":"Prof. Ricardo Mitchell V","email":"hilma66@example.net","created_at":"2025-06-25T06:21:09.000000Z","updated_at":"2025-06-25T06:21:09.000000Z"},"tags":[{"id":"360838b9-3625-326f-84aa-2a324db8ebca","name":"Est","slug":"est","color":"#e2073b","description":"Et cupiditate blanditiis sed iusto quo distinctio nobis et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/est"},{"id":"975e3e35-d1d4-3f38-9cf4-c83edc4daf73","name":"Laudantium","slug":"laudantium","color":"#5f00f2","description":"Neque voluptatem quia et excepturi consectetur voluptatem.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/laudantium"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"},{"id":"6e054f7e-dca7-362a-bebb-ce586c4f93eb","name":"Enim","slug":"enim","color":"#315c7e","description":"Est quaerat sapiente tenetur dolor.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/enim"},{"id":"b4a3f55e-64ae-3784-aab0-db987c96dcda","name":"Tempore","slug":"tempore","color":"#c15bef","description":"Officiis quia aut est et nihil.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/tempore"}],"url":"http:\/\/localhost:8000\/api\/posts\/consequatur-dolores-et-iusto-et"},{"id":"8e994973-93a9-3314-a6a5-68c5567920fb","title":"At rerum deserunt quae dolor.","slug":"at-rerum-deserunt-quae-dolor","excerpt":"Fugit alias et eveniet aut. Ipsum impedit impedit perferendis ullam facere minus. Consequatur nam qui nisi id non eos. Magnam nihil culpa ut ut.","content":"Officiis culpa dolorum ab ut distinctio officia. Consequatur laboriosam repudiandae dolorum minima saepe adipisci. Hic fugiat veritatis ipsa amet nisi. Et omnis sed non sint ipsa asperiores quos.\n\nReiciendis deleniti libero qui recusandae earum in et. Rerum qui accusantium minima dolores sit deserunt placeat expedita. Sint facilis eum architecto et et odio excepturi.\n\nId velit neque ut nihil aspernatur id. Sit rerum voluptatum sint fugit aut modi maiores. Repellendus recusandae esse nemo tempore cupiditate. Dolorem quaerat quae repudiandae aut amet.\n\nEt molestiae atque laboriosam suscipit earum. Non sunt quisquam mollitia nihil. Iste aut vero architecto tenetur sunt vero.\n\nQuo occaecati ab quidem expedita blanditiis optio. Ut illum sed dolores aliquam.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/009966?text=nature+assumenda","status":"published","published_at":"2024-08-05T12:31:13.000000Z","created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"c2bd5225-fd12-333f-bf02-22251cd5ba1f","name":"Ardella Waelchi","email":"hannah27@example.org","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"7fe90e0f-4ca7-33ff-a2b0-2ab285682df6","name":"Nesciunt","slug":"nesciunt","color":"#643d6a","description":"Dolore voluptate et non saepe iste dolorem doloremque.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/nesciunt"},{"id":"360838b9-3625-326f-84aa-2a324db8ebca","name":"Est","slug":"est","color":"#e2073b","description":"Et cupiditate blanditiis sed iusto quo distinctio nobis et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/est"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/excepturi"}],"url":"http:\/\/localhost:8000\/api\/posts\/at-rerum-deserunt-quae-dolor"},{"id":"d37bb76e-de26-39b6-915e-8591915e5068","title":"Consequatur nesciunt ut eum dolorem sit qui.","slug":"consequatur-nesciunt-ut-eum-dolorem-sit-qui","excerpt":"Deleniti sint eveniet ut alias natus laudantium quas. In ut vel dolores. Ipsum at incidunt aut aut quam.","content":"Iusto sunt illo perferendis accusantium. Quod sed omnis et eveniet ut. Unde aut excepturi placeat.\n\nMinus ipsa impedit omnis quasi. Et omnis possimus corporis voluptatem ut libero fuga et. Veniam saepe natus voluptate nihil expedita est. Nulla quo molestiae velit deserunt repellendus.\n\nAut occaecati et laboriosam molestiae voluptas omnis. Hic quos placeat distinctio in esse hic et. Harum quas quae architecto dolorem commodi. Molestiae quas accusantium ea ducimus.\n\nFugit odit possimus doloremque voluptatum voluptatem nisi saepe recusandae. Et ea mollitia enim cum ut. Consequatur quia voluptatem a sed.\n\nAutem earum similique veritatis necessitatibus quis soluta. Qui illum sit non quibusdam. Odio laboriosam ad placeat veritatis sit provident odio minima.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00aaee?text=nature+sunt","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"379a13b5-86df-3917-8478-071d9e6a4ef0","name":"Arno Parker","email":"stewart76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"7fe90e0f-4ca7-33ff-a2b0-2ab285682df6","name":"Nesciunt","slug":"nesciunt","color":"#643d6a","description":"Dolore voluptate et non saepe iste dolorem doloremque.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/nesciunt"},{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ad"},{"id":"9803d4ae-51ef-3c77-bc68-97cb1cea5353","name":"Cupiditate","slug":"cupiditate","color":"#630e57","description":"Excepturi animi fugiat perferendis aut voluptatum distinctio ratione.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/cupiditate"}],"url":"http:\/\/localhost:8000\/api\/posts\/consequatur-nesciunt-ut-eum-dolorem-sit-qui"},{"id":"a39562e1-3209-3b90-a603-3e37578a3d69","title":"Perferendis sint nesciunt voluptatibus aut sunt.","slug":"perferendis-sint-nesciunt-voluptatibus-aut-sunt","excerpt":"Dolor placeat excepturi quis. Unde quo laborum qui ut eos. Deserunt ipsum ab repellendus est commodi pariatur.","content":"Explicabo asperiores aut optio voluptatem. Dicta totam vitae impedit ut architecto. Illum natus dolor est nihil et odio.\n\nVitae accusantium nemo rerum recusandae cum sed quos. Dignissimos eveniet tempore cupiditate ipsa. Vel voluptatem totam harum magnam velit amet. Molestias earum provident repellendus corporis dolorem reprehenderit ipsum modi.\n\nIpsum libero labore sit voluptatum beatae asperiores. Sapiente itaque aut ut est eligendi.\n\nCommodi sequi quasi dolorum harum atque aut. Quam ullam sed voluptatum eaque.\n\nMinus reprehenderit impedit consequatur necessitatibus esse nisi sunt unde. Eveniet distinctio molestiae enim. Sunt in voluptatem ullam numquam natus error. Qui culpa rerum saepe voluptas omnis.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00eeaa?text=nature+consequatur","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"379a13b5-86df-3917-8478-071d9e6a4ef0","name":"Arno Parker","email":"stewart76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"d62fb390-ceba-357d-89a9-bbe0fb2e31f5","name":"Dolor","slug":"dolor","color":"#481fc9","description":"Excepturi aperiam consequatur numquam iure libero voluptatibus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/dolor"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/perferendis-sint-nesciunt-voluptatibus-aut-sunt"},{"id":"4e88f2d9-c935-31ab-bb90-fdd2e54a5452","title":"Adipisci facilis aperiam hic minima eligendi mollitia.","slug":"adipisci-facilis-aperiam-hic-minima-eligendi-mollitia","excerpt":"Soluta ex libero dolorum distinctio modi autem dolorum voluptates. Quis velit ut reiciendis veniam. Ipsam modi iste sint distinctio.","content":"Quis consequuntur maxime rem quasi voluptatem. In unde delectus aliquam dolore quia omnis. Beatae aut quia sed nemo ducimus architecto doloribus sed.\n\nPerferendis est doloribus fugiat qui voluptatem doloribus. Commodi explicabo est veniam aut sint voluptatibus. Fugiat voluptatibus nesciunt debitis laborum atque maxime. Autem ea nemo pariatur.\n\nUt consequatur repellendus nihil mollitia. Dolorum necessitatibus qui et molestias est eaque. Nulla et tempore autem et qui eaque occaecati. Eveniet tenetur et ipsam. Nam tempore sed ut saepe repellendus.\n\nVeritatis occaecati et blanditiis similique sunt. Esse iure libero qui dolorem et ut reiciendis enim. Eveniet ipsum enim est amet rem commodi. Nobis molestiae iure quod qui inventore vero.\n\nIn ipsa quidem neque maxime dolor quod fuga. Doloremque ut et ut numquam. Laudantium ut ut et reprehenderit id voluptas sed. Accusantium sit atque numquam cupiditate ut.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ffaa?text=nature+voluptates","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"31d3cbe2-f754-3fd7-91a2-4f6f2f0aad4c","name":"Velit","slug":"velit","color":"#38b945","description":"Porro odit et ad adipisci eos reprehenderit voluptates.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/velit"}],"url":"http:\/\/localhost:8000\/api\/posts\/adipisci-facilis-aperiam-hic-minima-eligendi-mollitia"}],"links":{"first":"http:\/\/localhost:8000\/api\/posts?page=1","last":"http:\/\/localhost:8000\/api\/posts?page=4","prev":null,"next":"http:\/\/localhost:8000\/api\/posts?page=2"},"meta":{"current_page":1,"from":1,"last_page":4,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/posts?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/posts?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/posts?page=3","label":"3","active":false},{"url":"http:\/\/localhost:8000\/api\/posts?page=4","label":"4","active":false},{"url":"http:\/\/localhost:8000\/api\/posts?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/posts","per_page":15,"to":15,"total":50}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":"4e88f2d9-c935-31ab-bb90-fdd2e54a5452","title":"Adipisci facilis aperiam hic minima eligendi mollitia.","slug":"adipisci-facilis-aperiam-hic-minima-eligendi-mollitia","excerpt":"Soluta ex libero dolorum distinctio modi autem dolorum voluptates. Quis velit ut reiciendis veniam. Ipsam modi iste sint distinctio.","content":"Quis consequuntur maxime rem quasi voluptatem. In unde delectus aliquam dolore quia omnis. Beatae aut quia sed nemo ducimus architecto doloribus sed.\n\nPerferendis est doloribus fugiat qui voluptatem doloribus. Commodi explicabo est veniam aut sint voluptatibus. Fugiat voluptatibus nesciunt debitis laborum atque maxime. Autem ea nemo pariatur.\n\nUt consequatur repellendus nihil mollitia. Dolorum necessitatibus qui et molestias est eaque. Nulla et tempore autem et qui eaque occaecati. Eveniet tenetur et ipsam. Nam tempore sed ut saepe repellendus.\n\nVeritatis occaecati et blanditiis similique sunt. Esse iure libero qui dolorem et ut reiciendis enim. Eveniet ipsum enim est amet rem commodi. Nobis molestiae iure quod qui inventore vero.\n\nIn ipsa quidem neque maxime dolor quod fuga. Doloremque ut et ut numquam. Laudantium ut ut et reprehenderit id voluptas sed. Accusantium sit atque numquam cupiditate ut.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ffaa?text=nature+voluptates","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"31d3cbe2-f754-3fd7-91a2-4f6f2f0aad4c","name":"Velit","slug":"velit","color":"#38b945","description":"Porro odit et ad adipisci eos reprehenderit voluptates.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/velit"}],"url":"http:\/\/localhost:8000\/api\/posts\/adipisci-facilis-aperiam-hic-minima-eligendi-mollitia"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/tags
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":10,"url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":9,"url":"http:\/\/localhost:8000\/api\/tags\/ad"},{"id":"9803d4ae-51ef-3c77-bc68-97cb1cea5353","name":"Cupiditate","slug":"cupiditate","color":"#630e57","description":"Excepturi animi fugiat perferendis aut voluptatum distinctio ratione.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/cupiditate"},{"id":"d62fb390-ceba-357d-89a9-bbe0fb2e31f5","name":"Dolor","slug":"dolor","color":"#481fc9","description":"Excepturi aperiam consequatur numquam iure libero voluptatibus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":6,"url":"http:\/\/localhost:8000\/api\/tags\/dolor"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/eligendi"},{"id":"6e054f7e-dca7-362a-bebb-ce586c4f93eb","name":"Enim","slug":"enim","color":"#315c7e","description":"Est quaerat sapiente tenetur dolor.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":6,"url":"http:\/\/localhost:8000\/api\/tags\/enim"},{"id":"360838b9-3625-326f-84aa-2a324db8ebca","name":"Est","slug":"est","color":"#e2073b","description":"Et cupiditate blanditiis sed iusto quo distinctio nobis et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":6,"url":"http:\/\/localhost:8000\/api\/tags\/est"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/excepturi"},{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/fugiat"},{"id":"f4c81e8a-b6c3-35e4-8c68-52e8fb06a9a6","name":"Id","slug":"id","color":"#9b4208","description":"Ex et soluta fugiat vel et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/id"},{"id":"975e3e35-d1d4-3f38-9cf4-c83edc4daf73","name":"Laudantium","slug":"laudantium","color":"#5f00f2","description":"Neque voluptatem quia et excepturi consectetur voluptatem.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":6,"url":"http:\/\/localhost:8000\/api\/tags\/laudantium"},{"id":"7fe90e0f-4ca7-33ff-a2b0-2ab285682df6","name":"Nesciunt","slug":"nesciunt","color":"#643d6a","description":"Dolore voluptate et non saepe iste dolorem doloremque.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":5,"url":"http:\/\/localhost:8000\/api\/tags\/nesciunt"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"c072cb21-772f-349d-9065-009a360a580d","name":"Recusandae","slug":"recusandae","color":"#26f4b1","description":"Perferendis tempore molestias id non et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":6,"url":"http:\/\/localhost:8000\/api\/tags\/recusandae"},{"id":"3338b5a0-c679-3021-80da-a52e7cfa5ae5","name":"Sit","slug":"sit","color":"#e86fa7","description":"Eius laborum ipsa repellat ut ducimus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":3,"url":"http:\/\/localhost:8000\/api\/tags\/sit"}],"links":{"first":"http:\/\/localhost:8000\/api\/tags?page=1","last":"http:\/\/localhost:8000\/api\/tags?page=2","prev":null,"next":"http:\/\/localhost:8000\/api\/tags?page=2"},"meta":{"current_page":1,"from":1,"last_page":2,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/tags?page=1","label":"1","active":true},{"url":"http:\/\/localhost:8000\/api\/tags?page=2","label":"2","active":false},{"url":"http:\/\/localhost:8000\/api\/tags?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/tags","per_page":15,"to":15,"total":20}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/tags/popular
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":15,"url":"http:\/\/localhost:8000\/api\/tags\/soluta"},{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":10,"url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":9,"url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":9,"url":"http:\/\/localhost:8000\/api\/tags\/ad"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/excepturi"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/eligendi"},{"id":"9803d4ae-51ef-3c77-bc68-97cb1cea5353","name":"Cupiditate","slug":"cupiditate","color":"#630e57","description":"Excepturi animi fugiat perferendis aut voluptatum distinctio ratione.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":8,"url":"http:\/\/localhost:8000\/api\/tags\/cupiditate"},{"id":"f4c81e8a-b6c3-35e4-8c68-52e8fb06a9a6","name":"Id","slug":"id","color":"#9b4208","description":"Ex et soluta fugiat vel et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/id"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":7,"url":"http:\/\/localhost:8000\/api\/tags\/fugiat"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/tags/search
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 400
+        content: '{"message":"Termo de busca \u00e9 obrigat\u00f3rio.","error":"MISSING_SEARCH_TERM"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tags/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","posts_count":9,"url":"http:\/\/localhost:8000\/api\/tags\/ut"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/tags/{tagId}/posts'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      tagId:
+        name: tagId
+        description: ''
+        required: true
+        example: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      tagId: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":"3a693cbb-4f34-3261-b07c-e04096e0051e","title":"Occaecati et labore facere qui.","slug":"occaecati-et-labore-facere-qui","excerpt":"Adipisci tempora enim velit a illo ducimus ullam. Dolor facere non facilis est hic est autem.","content":"Vel qui in quis quam qui impedit maxime consequatur. Ut molestias ipsa similique molestias et. Nobis qui id eaque veritatis autem.\n\nAsperiores voluptate consequuntur deleniti sit maiores enim tempora. Molestiae veniam dignissimos qui eius. Ea dolor tempore aut provident quasi.\n\nPerspiciatis debitis quis et deserunt in sed. Voluptates perspiciatis laudantium et ducimus illum ea. In mollitia laudantium molestias omnis quis aliquam. Aut quae excepturi est nulla sapiente magni.\n\nCulpa nihil quaerat commodi eos. Enim aut fuga voluptatibus aut incidunt itaque. Ex inventore dignissimos quod doloribus.\n\nNumquam hic quisquam sequi qui odio voluptatibus est ut. Dolorum quam aut ut. Ut et voluptas quo maxime. Porro quia possimus officiis dolore cum veritatis natus.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/005555?text=nature+temporibus","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"c68fc6a3-7038-3bc1-8172-b587648b4577","name":"Miss America Senger III","email":"rbednar@example.com","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"b4a3f55e-64ae-3784-aab0-db987c96dcda","name":"Tempore","slug":"tempore","color":"#c15bef","description":"Officiis quia aut est et nihil.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/tempore"}],"url":"http:\/\/localhost:8000\/api\/posts\/occaecati-et-labore-facere-qui"},{"id":"50d61e2b-2158-3d0c-99df-7733d1a451d3","title":"Porro corporis iure possimus quia cum vitae.","slug":"porro-corporis-iure-possimus-quia-cum-vitae","excerpt":"Cupiditate rem asperiores eos amet dolore quia voluptatem quos. Nisi est sapiente eius.","content":"Neque magnam molestiae ullam itaque magni ullam natus est. Corrupti rerum voluptatem optio eos. Illo voluptas quaerat quod quam blanditiis sunt.\n\nOdio in itaque saepe. Quia architecto fuga ad ut eos architecto voluptatem. Est ut est quaerat possimus labore. Et est dolorem a asperiores.\n\nUnde labore molestias sed sed et qui accusamus. Et suscipit iusto ex voluptatem itaque quae eius odit. Accusamus recusandae ratione voluptatem. Eius quia ut et et consequatur velit tenetur.\n\nDistinctio tempore corrupti hic repudiandae et eaque. Vero numquam est dolorem qui explicabo reiciendis perspiciatis cumque. Consequatur accusantium exercitationem ullam et voluptatem iure. Eveniet labore tenetur accusantium ea rem.\n\nEa voluptas nam odit iusto quo et modi et. Sit quis aut provident pariatur ipsa adipisci. Modi earum omnis quia sit neque voluptas. Animi repellat voluptatem ipsam vitae saepe inventore.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00dd66?text=nature+qui","status":"published","published_at":"2025-05-13T04:18:54.000000Z","created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"498129f8-f403-3640-9a7c-14b9ddb75344","name":"Mrs. Therese Huels","email":"crooks.lavon@example.com","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"c072cb21-772f-349d-9065-009a360a580d","name":"Recusandae","slug":"recusandae","color":"#26f4b1","description":"Perferendis tempore molestias id non et.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/recusandae"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/porro-corporis-iure-possimus-quia-cum-vitae"},{"id":"97c382ad-cf18-382d-912f-637f8cdd3234","title":"Ut sed neque sit natus.","slug":"ut-sed-neque-sit-natus","excerpt":"Et quis adipisci nostrum recusandae amet. Quis voluptatem corrupti minus corporis aut ducimus atque quibusdam. Et eos accusamus facere qui.","content":"Quia nemo quos voluptas deleniti. Corrupti praesentium in mollitia praesentium quae enim eligendi laboriosam. Voluptatum voluptate dolor dolores quasi. Est debitis excepturi nihil atque sunt omnis. Voluptatem soluta vel alias eius rerum voluptatem numquam debitis.\n\nRepellat quas similique dolorem quo tenetur nemo et. Quam provident omnis sit occaecati doloremque quia eaque. Atque aliquam voluptatem voluptatem porro. Dolores sit consectetur sit.\n\nIusto aut eum est nesciunt dolore odit omnis. Necessitatibus maxime quis quibusdam nisi sit iure. Reprehenderit qui facere qui consequatur.\n\nConsequatur temporibus eum consequuntur ut. Laboriosam qui quibusdam aliquid quo est minima. Voluptatum rerum ut aut sed.\n\nHic voluptatem fugit est sit. Voluptas tenetur rerum quisquam atque delectus. Blanditiis temporibus illo aut hic dolor possimus facilis. Fugiat neque at fugit aliquam illo facilis.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/009999?text=nature+tempore","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"acf0a2eb-2b60-3c7d-ad16-56eeb1734cb8","name":"Iva Kohler","email":"rklocko@example.net","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ad"},{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"9803d4ae-51ef-3c77-bc68-97cb1cea5353","name":"Cupiditate","slug":"cupiditate","color":"#630e57","description":"Excepturi animi fugiat perferendis aut voluptatum distinctio ratione.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/cupiditate"}],"url":"http:\/\/localhost:8000\/api\/posts\/ut-sed-neque-sit-natus"},{"id":"48a7361a-3d00-3f6f-bd16-0e5066bc3110","title":"Reprehenderit mollitia aut vitae.","slug":"reprehenderit-mollitia-aut-vitae","excerpt":"Sunt dicta dolorem laborum ut soluta. Facere magni blanditiis quam consectetur. In qui et vel amet omnis nobis.","content":"At architecto voluptatibus labore officia. Ut modi quibusdam sed. Animi tempore et mollitia molestiae. Tenetur sed error nihil eum sint.\n\nMaxime optio dolorum dolorem excepturi. Magnam magni delectus est hic reprehenderit. Et et non natus nihil minus itaque sint. Ut unde eligendi et eum sapiente.\n\nExercitationem minima exercitationem sint. At rem dolores voluptatem ea rem ab non numquam. Quia in perspiciatis velit adipisci recusandae. Perspiciatis corrupti voluptas dignissimos hic provident.\n\nRatione sunt totam vel. Non blanditiis aut vel impedit quisquam. Laborum maxime amet corporis qui officiis rerum ut. Quas ipsum accusantium sint amet.\n\nQuis consequatur sunt commodi vel laudantium nobis. Atque qui sapiente quibusdam. Alias harum necessitatibus et dolorum in est rerum.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00cc11?text=nature+enim","status":"published","published_at":"2024-07-31T23:16:19.000000Z","created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"c68fc6a3-7038-3bc1-8172-b587648b4577","name":"Miss America Senger III","email":"rbednar@example.com","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/fugiat"},{"id":"b4a3f55e-64ae-3784-aab0-db987c96dcda","name":"Tempore","slug":"tempore","color":"#c15bef","description":"Officiis quia aut est et nihil.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/tempore"}],"url":"http:\/\/localhost:8000\/api\/posts\/reprehenderit-mollitia-aut-vitae"},{"id":"a39562e1-3209-3b90-a603-3e37578a3d69","title":"Perferendis sint nesciunt voluptatibus aut sunt.","slug":"perferendis-sint-nesciunt-voluptatibus-aut-sunt","excerpt":"Dolor placeat excepturi quis. Unde quo laborum qui ut eos. Deserunt ipsum ab repellendus est commodi pariatur.","content":"Explicabo asperiores aut optio voluptatem. Dicta totam vitae impedit ut architecto. Illum natus dolor est nihil et odio.\n\nVitae accusantium nemo rerum recusandae cum sed quos. Dignissimos eveniet tempore cupiditate ipsa. Vel voluptatem totam harum magnam velit amet. Molestias earum provident repellendus corporis dolorem reprehenderit ipsum modi.\n\nIpsum libero labore sit voluptatum beatae asperiores. Sapiente itaque aut ut est eligendi.\n\nCommodi sequi quasi dolorum harum atque aut. Quam ullam sed voluptatum eaque.\n\nMinus reprehenderit impedit consequatur necessitatibus esse nisi sunt unde. Eveniet distinctio molestiae enim. Sunt in voluptatem ullam numquam natus error. Qui culpa rerum saepe voluptas omnis.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00eeaa?text=nature+consequatur","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"379a13b5-86df-3917-8478-071d9e6a4ef0","name":"Arno Parker","email":"stewart76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"d62fb390-ceba-357d-89a9-bbe0fb2e31f5","name":"Dolor","slug":"dolor","color":"#481fc9","description":"Excepturi aperiam consequatur numquam iure libero voluptatibus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/dolor"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"06e969d2-7957-3d3c-b333-924e13a9fd88","name":"Soluta","slug":"soluta","color":"#fbd7f0","description":"Enim voluptas id et omnis eos.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/soluta"}],"url":"http:\/\/localhost:8000\/api\/posts\/perferendis-sint-nesciunt-voluptatibus-aut-sunt"},{"id":"d1948a75-8cf0-3dbe-be64-1314c253acaa","title":"Illo qui amet suscipit ratione blanditiis facilis itaque.","slug":"illo-qui-amet-suscipit-ratione-blanditiis-facilis-itaque","excerpt":"Eius vero earum voluptas reiciendis harum. Quibusdam non rerum commodi magni perferendis. Fuga aut occaecati veniam.","content":"Pariatur labore enim excepturi eum quia et aut. Debitis nulla debitis quod adipisci. Nisi ut debitis porro qui eaque. Eveniet maxime modi iste aut aut similique atque.\n\nQuae voluptatem ut delectus autem enim error at. Amet quisquam aut non officia sit sunt. Eius sint omnis in.\n\nCorporis itaque iusto tempore quis quod. Ducimus et dicta est ullam. Omnis nam assumenda quod. Excepturi voluptas in voluptatibus.\n\nEveniet omnis velit earum quam quia cupiditate. Nisi expedita quas et culpa est molestiae quia sunt. In sunt voluptas sunt voluptas rerum necessitatibus ad assumenda.\n\nDolores suscipit laudantium id hic. Et placeat et saepe atque ut quia. Sint nesciunt est sit reiciendis ducimus id odio.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00ee66?text=nature+aliquid","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"498129f8-f403-3640-9a7c-14b9ddb75344","name":"Mrs. Therese Huels","email":"crooks.lavon@example.com","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"a623ce4b-b432-3f9f-80b6-e9c237e7cefc","name":"Veniam","slug":"veniam","color":"#4f7d6b","description":"Rerum occaecati et ea libero numquam.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/veniam"},{"id":"43ba10c5-f16a-3530-a69e-b77f9d32ec91","name":"Excepturi","slug":"excepturi","color":"#de329b","description":"Praesentium excepturi animi doloremque dolores accusamus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/excepturi"},{"id":"e4175f2d-cf9a-3d8c-8bad-1051fa2d7e1f","name":"Eligendi","slug":"eligendi","color":"#8fb95f","description":"Veritatis dolor ut consectetur omnis recusandae.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/eligendi"},{"id":"6e054f7e-dca7-362a-bebb-ce586c4f93eb","name":"Enim","slug":"enim","color":"#315c7e","description":"Est quaerat sapiente tenetur dolor.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/enim"}],"url":"http:\/\/localhost:8000\/api\/posts\/illo-qui-amet-suscipit-ratione-blanditiis-facilis-itaque"},{"id":"1ba6af69-9e34-3b23-8b41-77c926dce76b","title":"Minus itaque autem omnis repudiandae velit quo.","slug":"minus-itaque-autem-omnis-repudiandae-velit-quo","excerpt":"Et molestiae et eaque repellendus. Repudiandae aliquam odio vel blanditiis voluptatem quo. Qui unde quibusdam quo.","content":"Ut porro architecto qui numquam et ab. Laboriosam a esse voluptatibus ut. Totam velit sed ut eum maxime sit eligendi. Quo dolorem repudiandae neque repudiandae cumque. Sit atque porro veniam placeat alias.\n\nMagni et voluptate ut rerum. Fugiat ut ut eum aut id rem. Magni ab consequatur debitis repellendus nemo consectetur voluptatum dolor. Non ducimus molestiae et doloremque et beatae.\n\nEst voluptatem voluptates amet natus tempora assumenda. Omnis dolorem sint laudantium. Aut voluptas nobis sunt voluptatem. Vel consequuntur saepe iste omnis ut atque repellendus.\n\nQuae id velit veritatis mollitia. Labore nemo quae ratione alias dolorum repudiandae.\n\nEst rem vel incidunt quis quia fugiat provident iusto. Officiis quia veniam impedit qui. Ea mollitia et blanditiis odit.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/001133?text=nature+vero","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"c2bd5225-fd12-333f-bf02-22251cd5ba1f","name":"Ardella Waelchi","email":"hannah27@example.org","created_at":"2025-06-25T06:21:10.000000Z","updated_at":"2025-06-25T06:21:10.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"d62fb390-ceba-357d-89a9-bbe0fb2e31f5","name":"Dolor","slug":"dolor","color":"#481fc9","description":"Excepturi aperiam consequatur numquam iure libero voluptatibus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/dolor"},{"id":"31d3cbe2-f754-3fd7-91a2-4f6f2f0aad4c","name":"Velit","slug":"velit","color":"#38b945","description":"Porro odit et ad adipisci eos reprehenderit voluptates.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/velit"}],"url":"http:\/\/localhost:8000\/api\/posts\/minus-itaque-autem-omnis-repudiandae-velit-quo"},{"id":"c6a3c866-06ea-3802-b91d-38ff4a36ce30","title":"Molestias consequuntur aperiam corporis accusantium aut.","slug":"molestias-consequuntur-aperiam-corporis-accusantium-aut","excerpt":"Quasi excepturi magnam consequuntur cum architecto. Id aut reiciendis laborum incidunt distinctio nesciunt et hic.","content":"Sunt repellat accusantium optio. Natus vitae eos eos amet reiciendis. Dolor enim beatae quis labore tenetur maiores quasi.\n\nVelit voluptate aliquam dignissimos voluptates. Ut blanditiis aliquam dolorem voluptate.\n\nAut tempore amet dignissimos nostrum quo. Sint id eum dolores est voluptatibus dolore cumque atque. Et sunt ullam et quod qui. Suscipit tempora officia ducimus quibusdam.\n\nMinima ut minus laudantium. Velit doloremque nihil odit qui molestias quia atque. Et non delectus sapiente ea.\n\nFugit enim laboriosam iusto saepe quis ut. Optio soluta enim sed maxime aperiam. Aut distinctio quas illum voluptatem facere. Molestiae praesentium recusandae saepe a.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/00cc22?text=nature+corporis","status":"archived","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"e488c5ce-3868-3952-8100-6877daef7e42","name":"Reva Franecki V","email":"jeff76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"ad8304ce-1537-39c5-b50e-db3eb33a2dc9","name":"Accusantium","slug":"accusantium","color":"#9d8461","description":"Reprehenderit doloribus odit et quasi.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/accusantium"},{"id":"afec48e9-16a0-3547-918f-4040c1b3bf6d","name":"Omnis","slug":"omnis","color":"#ec3252","description":"Magnam vitae occaecati quasi laudantium quia esse.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/omnis"},{"id":"c65d0c93-63e0-3b28-8de3-323965348314","name":"Ad","slug":"ad","color":"#55bfa7","description":"Et corrupti impedit repellat doloribus.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ad"}],"url":"http:\/\/localhost:8000\/api\/posts\/molestias-consequuntur-aperiam-corporis-accusantium-aut"},{"id":"ff2347de-a4ee-3098-9e1c-010f680fcef5","title":"Quia culpa quibusdam exercitationem est provident est ducimus.","slug":"quia-culpa-quibusdam-exercitationem-est-provident-est-ducimus","excerpt":"Ipsam et in repellendus voluptatibus. Aperiam nihil in hic. Ut molestiae ipsam ea qui a dolorem.","content":"Dignissimos voluptas aut ab quae. Dignissimos facilis eos atque modi non. Dolore illo nisi ullam dicta soluta omnis sit. Deserunt dignissimos sed et laborum natus quae atque.\n\nIure nihil nobis omnis magni et perspiciatis animi. Ut iste quos aut aut enim dolorem blanditiis. Dolorum ullam voluptas dolor rerum aliquid.\n\nAccusantium est sint aspernatur asperiores. Et pariatur et iure porro quis voluptatum. Consectetur modi voluptatem cupiditate voluptates fuga qui rerum. Accusantium est aut ut veritatis nulla quia sequi. Ipsum ducimus sint qui qui.\n\nQuas quo iure quisquam autem eum. Dolorum dolore quasi ea et veniam. Aut harum sequi in quia impedit ducimus.\n\nQuo amet possimus sequi aliquid fugit sed atque sit. Ut qui deserunt blanditiis aut sunt qui. Natus quis dolorem nostrum dolorem fugit et adipisci.","featured_image_url":"https:\/\/via.placeholder.com\/640x480.png\/0077ff?text=nature+architecto","status":"draft","published_at":null,"created_at":"2025-06-25T06:21:13.000000Z","updated_at":"2025-06-25T06:21:13.000000Z","user":{"id":"e488c5ce-3868-3952-8100-6877daef7e42","name":"Reva Franecki V","email":"jeff76@example.net","created_at":"2025-06-25T06:21:11.000000Z","updated_at":"2025-06-25T06:21:11.000000Z"},"tags":[{"id":"6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678","name":"Ut","slug":"ut","color":"#24d5a5","description":"Ea esse unde odit ad.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/ut"},{"id":"d8da09a8-9301-3c0d-b1a3-dd41a7c09242","name":"Fugiat","slug":"fugiat","color":"#f02ffe","description":"Nihil aperiam a dolorem vel perferendis distinctio adipisci.","created_at":"2025-06-25T06:21:12.000000Z","updated_at":"2025-06-25T06:21:12.000000Z","url":"http:\/\/localhost:8000\/api\/tags\/fugiat"}],"url":"http:\/\/localhost:8000\/api\/posts\/quia-culpa-quibusdam-exercitationem-est-provident-est-ducimus"}],"links":{"first":"http:\/\/localhost:8000\/api\/tags\/6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678\/posts?page=1","last":"http:\/\/localhost:8000\/api\/tags\/6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678\/posts?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/localhost:8000\/api\/tags\/6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678\/posts?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/localhost:8000\/api\/tags\/6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678\/posts","per_page":15,"to":9,"total":9}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: gbailey@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: gbailey@example.net
+      password: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: zbailey@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: '-0pBNvYgxw'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: aykcmyuwpwlvqwrsitcpscqldz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: b
+      email: zbailey@example.net
+      password: '-0pBNvYgxw'
+      password_confirmation: aykcmyuwpwlvqwrsitcpscqldz
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/auth/profile
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Token de acesso inv\u00e1lido ou expirado.","error":"UNAUTHENTICATED"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/users
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: zbailey@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: '-0pBNvYgxw'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: b
+      email: zbailey@example.net
+      password: '-0pBNvYgxw'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: false
+        example: zbailey@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: false
+        example: '-0pBNvYgxw'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: b
+      email: zbailey@example.net
+      password: '-0pBNvYgxw'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: dfdf7436-566a-35a9-a78a-e4aea63f9f3d
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/posts
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: 'The <code>id</code> of an existing record in the users table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      slug:
+        name: slug
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: g
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      excerpt:
+        name: excerpt
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: z
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      content:
+        name: content
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      featured_image_url:
+        name: featured_image_url
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://bailey.com/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: false
+        example: draft
+        type: string
+        enumValues:
+          - draft
+          - published
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      published_at:
+        name: published_at
+        description: 'Must be a valid date.'
+        required: false
+        example: '2025-06-25T06:59:14'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      tag_ids:
+        name: tag_ids
+        description: 'The <code>id</code> of an existing record in the tags table.'
+        required: false
+        example:
+          - architecto
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      user_id: architecto
+      title: 'n'
+      slug: g
+      excerpt: z
+      content: architecto
+      featured_image_url: 'http://bailey.com/'
+      status: draft
+      published_at: '2025-06-25T06:59:14'
+      tag_ids:
+        - architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: 'The <code>id</code> of an existing record in the users table.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      slug:
+        name: slug
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: g
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      excerpt:
+        name: excerpt
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: z
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      content:
+        name: content
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      featured_image_url:
+        name: featured_image_url
+        description: 'Must be a valid URL.'
+        required: false
+        example: 'http://bailey.com/'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: false
+        example: draft
+        type: string
+        enumValues:
+          - draft
+          - published
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      published_at:
+        name: published_at
+        description: 'Must be a valid date.'
+        required: false
+        example: '2025-06-25T06:59:14'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      tag_ids:
+        name: tag_ids
+        description: 'The <code>id</code> of an existing record in the tags table.'
+        required: false
+        example:
+          - architecto
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      user_id: architecto
+      title: 'n'
+      slug: g
+      excerpt: z
+      content: architecto
+      featured_image_url: 'http://bailey.com/'
+      status: draft
+      published_at: '2025-06-25T06:59:14'
+      tag_ids:
+        - architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/posts/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the post.'
+        required: true
+        example: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/posts/{post_id}/publish'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      post_id: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/posts/{post_id}/unpublish'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      post_id: 4e88f2d9-c935-31ab-bb90-fdd2e54a5452
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/tags
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      slug:
+        name: slug
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      color:
+        name: color
+        description: 'Must match the regex /^#[0-9A-Fa-f]{6}$/.'
+        required: false
+        example: '#fEEeDb'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      description:
+        name: description
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'Accusantium harum mollitia modi deserunt aut ab.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: b
+      slug: 'n'
+      color: '#fEEeDb'
+      description: 'Accusantium harum mollitia modi deserunt aut ab.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/tags/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      slug:
+        name: slug
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      color:
+        name: color
+        description: 'Must match the regex /^#[0-9A-Fa-f]{6}$/.'
+        required: false
+        example: '#fEEeDb'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      description:
+        name: description
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'Accusantium harum mollitia modi deserunt aut ab.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: b
+      slug: 'n'
+      color: '#fEEeDb'
+      description: 'Accusantium harum mollitia modi deserunt aut ab.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/tags/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the tag.'
+        required: true
+        example: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 6bcd0e96-7ef8-3c64-97ee-c9b9a7f7b678
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

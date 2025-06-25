@@ -23,7 +23,7 @@ class TagResource extends JsonResource
             'posts_count' => $this->whenCounted('posts'),
             
             // URLs
-            'url' => route('tags.show', $this->slug),
+            'url' => url("/api/tags/{$this->slug}"),
         ];
     }
 }

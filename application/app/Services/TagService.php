@@ -52,6 +52,10 @@ class TagService
 
     public function updateTag(Tag $tag, TagDTO $dto): Tag
     {
+        if (!$dto->hasDataToUpdate()) {
+            return $tag;
+        }
+
         return $this->tagRepository->update($tag, $dto->toArray());
     }
 
