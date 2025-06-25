@@ -1,16 +1,23 @@
-# Teste Técnico para a vaga de Engenheiro de Software no projeto UEFS - Netra
+# Blog API – README
 
-Este desafio técnico é destinado aos candidatos à posição de Engenheiro de Software no projeto UEFS - NETRA. O objetivo é avaliar competências práticas em desenvolvimento de software por meio da criação de uma API RESTful utilizando PHP (Laravel 8 ou superior), um Sistema de Gerenciamento de Banco de Dados (SGBD) de sua escolha, e Docker.
+## Visão geral
 
-O prazo para a realização do teste é de 5 dias corridos, e a entrega deve ser feita por meio de um repositório no GitHub.
+Esta aplicação é uma API RESTful escrita em **Laravel 12** e **PostgreSQL** que implementa operações CRUD para **Usuários**, **Posts** e **Tags**, além de fluxo de autenticação via tokens do **Laravel Sanctum**. O projeto foi desenvolvido como solução para um teste técnico para a vaga de Engenheiro de Software no projeto UEFS da empresa Netra.
 
-Para participar, faça um fork deste repositório, aplique a solução proposta e envie para nossa análise.
+## Stack e pré‑requisitos
+
+* **Docker Desktop** (Linux containers)
+* **Docker Compose**
+* **Node.js >= 18** e **npm** (apenas para assets via Vite)
+* **Git**
+
+> Se preferir, todo o ambiente pode ser levantado apenas com Docker, dispensando PHP e Composer instalados localmente.
 
 ---
 
 ## Escopo do Teste Técnico
 
-Você deverá desenvolver uma API RESTful com as seguintes funcionalidades:
+Desenvolver uma API RESTful com as seguintes funcionalidades:
 
 - CRUD de **Usuários**
 - CRUD de **Posts**
@@ -29,70 +36,151 @@ Você deverá desenvolver uma API RESTful com as seguintes funcionalidades:
 
 ---
 
-## Avaliação Técnica (durante o **teste prático**)
+## Instalação rápida (modo desenvolvimento sem Docker)
 
-Serão avaliados os seguintes pontos conforme o nível de senioridade:
+```bash
+# 1. Clone o repositório
+git clone <REPO_URL> blog-api && cd blog-api
 
-### Para Todos os Níveis
+# 2. Instale dependências de front‑end e rode Vite em modo dev
+npm install && npm run dev
 
-- Conhecimento e uso de recursos do Laravel  
-- Familiaridade com Docker e Docker Compose  
-- Organização, clareza e estrutura do código  
-- Implementação funcional da API RESTful  
-- Utilização adequada do banco de dados escolhido  
+# 3. Copie variáveis de ambiente
+cp .env.example .env
+# ajuste credenciais se necessário
 
-### Nível Júnior
+# 4. Instale dependências PHP e rode migrations
+docker run --rm -v $(pwd):/app -w /app composer install
+php artisan key:generate
+php artisan migrate --seed
+```
 
-- Fundamentos de lógica de programação  
-- Conhecimento básico dos princípios SOLID  
-- Adesão aos padrões PSR (estilo de código PHP)  
-- Uso inicial de testes (PHPUnit ou Pest) — **não obrigatório**  
-
-### Nível Pleno
-
-- Lógica de programação mais estruturada  
-- Aplicação consistente dos princípios SOLID  
-- Implementação de testes unitários (PHPUnit ou Pest)  
-- Boas práticas de performance e legibilidade do código  
-
-### Nível Sênior
-
-- Arquitetura bem definida e organização do projeto  
-- Uso estratégico dos princípios SOLID em componentes reutilizáveis  
-- Testes completos (unitários e, se possível, de integração)  
-- Otimizações de performance no código e consultas  
-- Documentação técnica clara e abrangente (API, arquitetura, setup)  
-- Uso de boas práticas de versionamento e estruturação do repositório  
+> **Recomendado**: utilizar o workflow completo abaixo com Docker para garantir que o ambiente seja idêntico ao de produção.
 
 ---
 
-## Avaliação Complementar (durante a **entrevista técnica**)
+## Execução com Docker
 
-Após a entrega e análise do teste prático, os candidatos que avançarem para a próxima etapa participarão de uma entrevista técnica, onde serão avaliados critérios como:
+1. **Construa as imagens**
 
-- Clareza na explicação de decisões técnicas  
-- Capacidade de análise e resolução de problemas  
-- Conhecimento sobre arquitetura de software e design de soluções  
-- Abordagem colaborativa e visão de liderança técnica (para cargos mais seniores)  
-- Nível de profundidade em testes, padrões, e boas práticas além do que foi entregue  
+   ```bash
+   docker‑compose build
+   ```
+2. **Suba os containers**
+
+   ```bash
+   docker‑compose up ‑d
+   ```
+3. **Instale dependências PHP**
+
+   ```bash
+   docker‑compose exec app composer install
+   ```
+4. **Gere a chave da aplicação**
+
+   ```bash
+   docker‑compose exec app php artisan key:generate
+   ```
+5. **Crie e popule o banco**
+
+   ```bash
+   docker‑compose exec app php artisan migrate --seed
+   ```
+6. **Gere a documentação da API (Scribe)**
+
+   ```bash
+   docker‑compose exec app php artisan scribe:generate
+   ```
+7. **Inicialize configuração de testes (Pest)**
+
+   ```bash
+   docker‑compose exec app ./vendor/bin/pest --init
+   ```
+8. **Limpe caches**
+
+   ```bash
+   docker‑compose exec app php artisan optimize:clear
+   ```
+
+> Após esses passos a API estará disponível em `http://localhost:8000`.
 
 ---
 
-## Recursos Opcionais (recomendados, mas não obrigatórios)
+## Gerenciador de banco (Adminer)
 
-- Documentação automática com Swagger ou Scribe  
-- Interface gráfica simples para consulta dos dados (React, Vue, Blade, Livewire, etc.)  
-
----
-
-## Retorno
-
-Após a análise técnica:
-
-- Se aprovado, entraremos em contato para a entrevista técnica.  
-- Se não aprovado, forneceremos um retorno com os principais pontos de melhoria observados.
+* URL: [http://localhost:8080/](http://localhost:8080/)
+* Sistema: **PostgreSQL**
+  Servidor: `postgres`
+  Usuário: `laravel`
+  Senha: `secret`
+  Banco: `api_blog`
 
 ---
 
-**Boa sorte!**  
-Equipe de Desenvolvimento NETRA – Projeto UEFS
+## Documentação da API (Scribe)
+
+Acesse a documentação interativa gerada automaticamente em:
+[http://localhost:8000/docs](http://localhost:8000/docs)
+
+---
+
+## Testes automatizados (Pest)
+
+Execute toda a suíte de testes:
+
+```bash
+docker‑compose exec app php artisan test
+```
+
+---
+
+## Rotas
+
+### 1. Rotas públicas (não requerem token)
+
+| Método | Endpoint                    | Descrição            |
+| ------ | --------------------------- | -------------------- |
+| `GET`  | `/api/users`                | Lista usuários       |
+| `GET`  | `/api/users/{id}`           | Detalha usuário      |
+| `GET`  | `/api/users/{userId}/posts` | Posts de um usuário  |
+| `GET`  | `/api/posts`                | Lista posts          |
+| `GET`  | `/api/posts/{id}`           | Detalha post         |
+| `GET`  | `/api/tags`                 | Lista tags           |
+| `GET`  | `/api/tags/popular`         | Tags mais usadas     |
+| `GET`  | `/api/tags/search?query=`   | Busca tags por termo |
+| `GET`  | `/api/tags/{id}`            | Detalha tag          |
+| `GET`  | `/api/tags/{tagId}/posts`   | Posts de uma tag     |
+
+### 2. Rotas de autenticação
+
+| Método | Endpoint             | Descrição                                    |
+| ------ | -------------------- | -------------------------------------------- |
+| `POST` | `/api/auth/register` | Cria novo usuário e retorna token            |
+| `POST` | `/api/auth/login`    | Autentica usuário e retorna token            |
+| `POST` | `/api/auth/logout`   | Invalidar token atual *(requer token)*       |
+| `GET`  | `/api/auth/profile`  | Retorna usuário autenticado *(requer token)* |
+
+### 3. Rotas protegidas (requerem token Bearer)
+
+| Método   | Endpoint                    | Descrição        |
+| -------- | --------------------------- | ---------------- |
+| `POST`   | `/api/users`                | Cria usuário     |
+| `PUT`    | `/api/users/{id}`           | Atualiza usuário |
+| `DELETE` | `/api/users/{id}`           | Remove usuário   |
+| `POST`   | `/api/posts`                | Cria post        |
+| `PUT`    | `/api/posts/{id}`           | Atualiza post    |
+| `DELETE` | `/api/posts/{id}`           | Remove post      |
+| `POST`   | `/api/posts/{id}/publish`   | Publica post     |
+| `POST`   | `/api/posts/{id}/unpublish` | Despublica post  |
+| `POST`   | `/api/tags`                 | Cria tag         |
+| `PUT`    | `/api/tags/{id}`            | Atualiza tag     |
+| `DELETE` | `/api/tags/{id}`            | Remove tag       |
+
+> Para todas as rotas protegidas, inclua o cabeçalho:
+> `Authorization: Bearer <token-recebido-no-login>`
+
+---
+
+## Licença
+
+Distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
